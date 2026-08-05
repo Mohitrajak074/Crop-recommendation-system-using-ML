@@ -1,4 +1,3 @@
 # Crop-recommendation-system-using-ML
  # by mohit rajak
- #This is our minar project
- 
+ #This is our minor project
