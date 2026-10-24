@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Login | CropRecommend</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<nav class="navbar">
+  <div class="container nav-inner">
+    <a class="logo" href="index.html"><span class="logo-leaf">🌿</span>Crop<span>Recommend</span></a>
+    <div class="nav-links">
+      <a href="index.html">Home</a><a href="predict.html">Predict</a><a href="result.html">Result</a>
+      <a href="history.html">History</a><a href="about.html">About</a>
+    </div>
+  </div>
+</nav>
+
+<main class="login-page">
+  <section class="login-box">
+    <div id="loginPanel">
+      <h1>Welcome Back</h1>
+      <p>Login to access your CropRecommend dashboard.</p>
+      <form id="loginForm">
+        <div class="login-field">
+          <label for="loginEmail">Email</label>
+          <input id="loginEmail" name="email" type="email" placeholder="Enter your email" required autocomplete="email">
+        </div>
+        <div class="login-field">
+          <label for="loginPassword">Password</label>
+          <input id="loginPassword" name="password" type="password" placeholder="Enter your password" required
+            minlength="8" maxlength="128" autocomplete="current-password">
+        </div>
+        <button class="login-submit" type="submit">Login</button>
+        <div id="loginMessage" class="login-message" role="status" aria-live="polite"></div>
+      </form>
+      <p class="login-note">New here? <button class="auth-switch" id="showRegister" type="button">Create an account</button></p>
+    </div>
+
+    <div id="registerPanel" hidden>
+      <h1>Create Account</h1>
+      <p>Register to save and view your crop recommendations.</p>
+      <form id="registerForm">
+        <div class="login-field">
+          <label for="registerName">Name</label>
+          <input id="registerName" name="name" type="text" placeholder="Your name" required maxlength="100"
+            autocomplete="name">
+        </div>
+        <div class="login-field">
+          <label for="registerEmail">Email</label>
+          <input id="registerEmail" name="email" type="email" placeholder="Enter your email" required maxlength="254"
+            autocomplete="email">
+        </div>
+        <div class="login-field">
+          <label for="registerPassword">Password</label>
+          <input id="registerPassword" name="password" type="password" placeholder="At least 8 characters" required
+            minlength="8" maxlength="128" autocomplete="new-password">
+        </div>
+        <button class="login-submit" type="submit">Create Account</button>
+        <div id="registerMessage" class="login-message" role="status" aria-live="polite"></div>
+      </form>
+      <p class="login-note">Already registered? <button class="auth-switch" id="showLogin" type="button">Login</button></p>
+    </div>
+  </section>
+</main>
+<script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+CROP RECOMMENDATION SYSTEM
+
+FRONTEND
+  index.html, login.html, predict.html, result.html, history.html, about.html
+  css/styles.css
+  js/app.js
+
+BACKEND AND STORAGE
+  app.py             Flask page server and JSON API
+  init_db.py         Optional SQLite initialization command
+  instance/          Automatically created SQLite database (ignored by Git)
+  crop_model.pkl     Selected fitted scikit-learn model bundle
+  train_model.py     Notebook-equivalent training and model selection
+
+CURRENT FLOW
+  Flask-served pages -> session-backed authentication -> validated prediction API
+  -> trained classifier top-three recommendations -> per-user SQLite history
+
+PREDICTION INPUTS
+  nitrogen, phosphorus, potassium, temperature, humidity, ph, rainfall
+
+MODEL TRAINING
+  python train_model.py trains the notebook's four classifiers with its
+  stratified 80/20 split, selects the highest test-accuracy model, and saves
+  its fitted estimator and metadata in crop_model.pkl.
+
+AUTHENTICATION
+  Registration and login -> Werkzeug password hashes -> Flask session cookie.
+  API authorization and prediction ownership use the server-side session.
+  Email addresses are not verified by this application.

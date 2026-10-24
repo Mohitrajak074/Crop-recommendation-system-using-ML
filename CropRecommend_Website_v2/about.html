@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>About | CropRecommend</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="container nav-inner"><a class="logo" href="index.html"><span
+          class="logo-leaf">🌿</span>Crop<span>Recommend</span></a>
+      <div class="nav-links"><a class="" href="index.html">Home</a><a class="" href="predict.html">Predict</a><a
+          class="" href="result.html">Result</a><a class="" href="history.html">History</a><a class="active"
+          href="about.html">About</a></div><span class="user-badge" id="userBadge"></span><button class="login-btn"
+        id="authButton" type="button">Login</button><button class="mobile-menu">☰</button>
+    </div>
+  </nav>
+  <header class="page-hero">
+    <div class="container">
+      <h1>About Our Project</h1>
+      <p>Learn more about the Crop Recommendation System.</p>
+    </div>
+  </header>
+  <main class="container section">
+    <div class="about-grid">
+      <section class="card goal-card">
+        <h2>🌱 Our Goal</h2>
+        <p>This project demonstrates a crop recommendation workflow based on soil nutrients and environmental conditions.</p>
+        <p>The trained crop classifier and fitted preprocessing are loaded by Flask when the application starts.</p>
+      </section>
+      <section class="card">
+        <h2>Technology Structure</h2>
+        <div class="tech-grid">
+          <div class="tech"><strong>Frontend</strong><span>HTML + CSS + JavaScript</span></div>
+          <div class="tech"><strong>ML Model</strong><span>Trained, selected classifier with probability estimates</span></div>
+          <div class="tech"><strong>Backend</strong><span>Python Flask API and sessions</span></div>
+          <div class="tech"><strong>Database</strong><span>SQLite users and prediction history</span></div>
+        </div>
+      </section>
+    </div>
+    <section class="card" style="margin-top:25px">
+      <h2>Recommendation Flow</h2>
+      <p style="color:#59675f;line-height:1.7">Frontend → authenticated Flask API → server-side validation → trained classifier → top three model probability estimates → SQLite history.</p>
+    </section>
+  </main>
+  <footer class="footer">🌿 CropRecommend — Flask, SQLite, and trained crop classifier.</footer>
+  <script src="js/app.js"></script>
+</body>
+
+</html>

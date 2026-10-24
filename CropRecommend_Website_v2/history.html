@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>History | CropRecommend</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="container nav-inner"><a class="logo" href="index.html"><span
+          class="logo-leaf">🌿</span>Crop<span>Recommend</span></a>
+      <div class="nav-links"><a class="" href="index.html">Home</a><a class="" href="predict.html">Predict</a><a
+          class="" href="result.html">Result</a><a class="active" href="history.html">History</a><a class=""
+          href="about.html">About</a></div><span class="user-badge" id="userBadge"></span><button class="login-btn"
+        id="authButton" type="button">Login</button><button class="mobile-menu">☰</button>
+    </div>
+  </nav>
+  <header class="page-hero">
+    <div class="container">
+      <h1>Prediction History</h1>
+      <p>View your saved crop recommendations.</p>
+    </div>
+  </header>
+  <main class="container section">
+    <div class="notice">Your primary model recommendation and input values are saved to your account's SQLite history.</div>
+    <section class="card">
+      <div class="table-wrap">
+        <table class="history-table">
+          <thead>
+            <tr>
+              <th>No.</th>
+              <th>Date & Time</th>
+              <th>N</th>
+              <th>P</th>
+              <th>K</th>
+              <th>Temp</th>
+              <th>Humidity</th>
+              <th>Crop</th>
+            </tr>
+          </thead>
+          <tbody data-history></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+  <script src="js/app.js"></script>
+</body>
+
+</html>
